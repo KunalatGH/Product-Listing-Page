@@ -100,6 +100,26 @@
   font-family: Poppins;
 }
 
+#first{
+  background-color: #c2c2c2;
+  padding: 20px;
+}
+#second{
+  margin-top: 10%;
+  background-color: #c2c2c2;
+  padding: 20px;
+}
+#third{
+  margin-top: 10%;
+  background-color: #c2c2c2;
+  padding: 20px;
+}
+#fourth{
+  margin-top: 10%;
+  background-color: #c2c2c2;
+  padding: 20px;
+}
+
 #hotdeals {
   width: 111px;
   height: 39px;
@@ -111,11 +131,61 @@
 }
 
 #categories {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   padding: 5px;
   padding-top: 25px;
   font-size: 20px;
   margin-top: 20px;
+}
+
+#prices{
+  width: 111px;
+  height: 39px;
+  top: 123.37px;
+  left: 53.04px;
+  font-family: Poppins;
+  padding-top: 20px;
+  font-weight: 600;
+  font-size: 25px;
+}
+#color{
+  width: 111px;
+  height: 39px;
+  top: 123.37px;
+  left: 53.04px;
+  font-family: Poppins;
+  padding-top: 20px;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+#range{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  margin-top: 25px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+
+#slider{
+  width: 260px;
+  border-radius: 12px;
+  accent-color: #4b9fff;
+  height: 15px;
+  place-self: center;
+}
+
+#brands {
+  width: 111px;
+  height: 39px;
+  top: 123.37px;
+  left: 53.04px;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 25px;
 }
 
 .cat_head {
