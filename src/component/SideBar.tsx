@@ -59,19 +59,19 @@ const SideBar = () => {
             <h2>Brands</h2>
         </div>
         <div id="categories">
-            <div class="cat_head">
+            <div className="cat_head">
             <h2>Nike</h2><span>99</span>
             </div>
-            <div class="cat_head">
+            <div className="cat_head">
             <h2>Adidas</h2><span>99</span>
             </div>
-            <div class="cat_head">
+            <div className="cat_head">
             <h2>Airmax</h2><span>99</span>
             </div>
-            <div class="cat_head">
+            <div className="cat_head">
             <h2>Airmax</h2><span>99</span>
             </div>
-            <div class="cat_head">
+            <div className="cat_head">
             <h2>Van</h2><span>99</span>
             </div>
         </div>
