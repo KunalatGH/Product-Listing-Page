@@ -47,9 +47,9 @@ const SideBar = () => {
         </div>
         <div id="randediv">
             <div id="colors">
-                <div class="color1">c1</div>
-                <div class="color2">c2</div>
-                <div class="color3">c3</div>
+                <div className="color2">c2</div>
+                <div className="color3">c3</div>
+                <div className="color1">c1</div>
                 </div>
         </div>
         </div>
