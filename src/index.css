@@ -1,68 +1,184 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  font: poppins;
+  box-sizing: border-box;
+  /* background-color: #FFFFFF; */
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
+#navbar {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  width: 1499.39px;
+  height: 65px;
+  top: 26.27px;
+  left: 0.4px;
+  padding: 4px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+#ecom {
+  width: 124px;
+  height: 33px;
+  top: 17.27px;
+  left: 85.4px;
+  color: #22262a;
+  font: poppins;
+  font-weight: 700;
+  font-size: 24px;
+  /* line-height: 100%; */
+  letter-spacing: 0px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+#center {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 804px;
+  height: 40px;
+  top: 17.27px;
+  left: 407.4px;
+  font-weight: 450;
+  /* font-family: poppins; */
+  font-size: 20px;
+  color: #22262a;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+#cart {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 200px;
+  height: 40px;
+}
+
+#cart_img {
+  width: 31px;
+  height: 34px;
+  top: 18.27px;
+  left: 1301.4px;
+  opacity: 1;
+}
+
+#items {
+  text-align: center;
+  width: 58.97px;
+  font-family: proxima-nova;
+  font-weight: 400;
+  font-size: 20px;
+  /* height: 35.15px; */
+  top: 26.27px;
+  left: 1346.4px;
+  color: #262626;
+}
+
+#price {
+  width: 57.86px;
+  top: 26.27px;
+  left: 1412.4px;
+  opacity: 15%;
+  color: #262626;
+}
+
+#divider {
+  width: 1499.39px;
+  /* height: 4.53px; */
+  top: 66.75px;
+  left: 0.4px;
+  border: 1px solid #6f6f6f;
+}
+
+#sidebar {
+  width: 355px;
+  height: 1385px;
+  top: 95.27px;
+  left: 21.4px;
+  border: 2px solid black;
+  padding: 30px;
+  font-size: large;
+  font-family: Poppins;
+}
+
+#hotdeals {
+  width: 111px;
+  height: 39px;
+  top: 123.37px;
+  left: 53.04px;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+#categories {
+  border: 2px solid black;
+  padding: 5px;
+  padding-top: 25px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.cat_head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  
+}
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  width: 1499px;
+  height: 626px;
+  top: 1504.27px;
+  left: 1.6px;
+  border: 2px solid black;
+  gap: 30px;
+  background-color: #bcddfe;
+}
+
+#textarea {
+  width: 220.95px;
+  height: 69px;
+  top: 1661.11px;
+  left: 152.06px;
+  font-family: Proxima Nova;
+  font-weight: 200;
+  font-size: 15px;
+}
+
+#div1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 1200px;
+  height: 280px;
+  top: 1529.27px;
+  left: 152.06px;
+}
+#ouroffer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 1200px;
+  height: 134.8px;
+  top: 1799px;
+  left: 152.06px;
+}
+
+#info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+#divider_bottom {
+  width: 1000px;
+  /* height: 4.53px; */
+  top: 66.75px;
+  left: 0.4px;
+  border: 1px solid #ffff;
 }
