@@ -10,6 +10,7 @@ interface CardProps {
   image: string;
   rating: number;
   isHot?: boolean;
+  bgColor?: string;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -20,9 +21,10 @@ const Card: React.FC<CardProps> = ({
   image,
   rating,
   isHot = false,
+  bgColor,
 }) => {
   return (
-    <div className="card">
+    <div className="card" style={{ backgroundColor: bgColor }}>
       {isHot && <span className="badge">HOT</span>}
       <img src={image} alt={title} className="card-img" />
       <h3 className="card-title">{title}</h3>
