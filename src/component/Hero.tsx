@@ -107,7 +107,7 @@ const Hero: React.FC<HeroProps> = ({ selectedColor, selectedCategory = "All" }) 
   }
 
   // Sorting logic
-  const sortProducts = (items: products[]) => {
+  const sortProducts = (items) => {
     switch (sortOption) {
       case "nameAsc":
         return [...items].sort((a, b) => a.title.localeCompare(b.title));
