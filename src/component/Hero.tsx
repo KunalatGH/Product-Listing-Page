@@ -8,7 +8,18 @@ interface HeroProps{
   selectedCategory : string;
 }
 
-const products = [
+interface Product {
+  title?: string;
+  price?: number;
+  image?: string;
+  rating?: number;
+  category?: string;
+  isHot?: boolean;
+  placeholder?: boolean; // allow placeholders
+}
+
+
+const products: Product[] = [
   {
     title: "Nike Air Max 270",
     price: 150,
@@ -107,19 +118,19 @@ const Hero: React.FC<HeroProps> = ({ selectedColor, selectedCategory = "All" }) 
   }
 
   // Sorting logic
-  const sortProducts = (items) => {
+  const sortProducts = (items: Product[]): Product[] => {
     switch (sortOption) {
       case "nameAsc":
-        return [...items].sort((a, b) => a.title.localeCompare(b.title));
+        return [...items].sort((a, b) => (a.title || "").localeCompare(b.title || ""));
       case "nameDesc":
-        return [...items].sort((a, b) => b.title.localeCompare(a.title));
+        return [...items].sort((a, b) => (b.title || "").localeCompare(a.title || ""));
       case "lowtohigh":
-        return [...items].sort((a, b) => a.price - b.price);
+        return [...items].sort((a, b) => (a.price || 0) - (b.price || 0));
       case "hightolow":
-        return [...items].sort((a, b) => b.price - a.price);
+        return [...items].sort((a, b) => (b.price || 0) -( a.price || 0));
       case "featured":
       default:
-        return [...items].sort((a, b) => (b.isHot ? -1 : 1)); // HOT first
+        return [...items].sort((a, b) => (b.isHot ? 1 : 0) - (a.isHot ? 1 : 0)); // HOT first
     }
   };
 
@@ -132,7 +143,7 @@ const Hero: React.FC<HeroProps> = ({ selectedColor, selectedCategory = "All" }) 
     startIndex,
     startIndex + ITEMS_PER_PAGE
   );
-  const slotsp = [...currentProducts];
+  const slotsp: Product[] = [...currentProducts];
   while (slotsp.length < ITEMS_PER_PAGE) {
     slotsp.push({ placeholder: true });
   }
@@ -205,10 +216,10 @@ const Hero: React.FC<HeroProps> = ({ selectedColor, selectedCategory = "All" }) 
             ) : (
               <Card
                 key={index}
-                title={product.title}
-                price={product.price}
-                image={product.image}
-                rating={product.rating}
+                title={product.title || "Untitled"}
+                price={product.price || 0}
+                image={product.image|| "empty"}
+                rating={product.rating || 0}
                 isHot={true}
                 bgColor={selectedColor}
               />
