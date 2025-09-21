@@ -1,5 +1,11 @@
 import React, { useState } from "react";
 
+interface SideBarProps{
+  onColorChange:(color: string) => void;
+  onCategoryChange:(category: string) => void;
+  selectedCategory : string;
+}
+
 const colors = [
   "#000000",
   "#FFFFFF",
@@ -11,7 +17,7 @@ const colors = [
 
 const categories = ["All", "Nike", "Adidas", "Airmax", "Van", "All Stars"];
 
-const SideBar = ({ onColorChange, onCategoryChange, selectedCategory }) => {
+const SideBar: React.FC<SideBarProps> = ({ onColorChange, onCategoryChange, selectedCategory }) => {
   const [selectedColor, setSelectedColor] = useState<string>("");
 
   const [openCategory, setOpenCategory] = useState<string | null>("All");

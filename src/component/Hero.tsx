@@ -3,6 +3,11 @@ import Card from "./Card";
 // import SideBar from "./SideBar";
 import { useSearchParams } from "react-router-dom";
 
+interface HeroProps{
+  selectedColor : string;
+  selectedCategory : string;
+}
+
 const products = [
   {
     title: "Nike Air Max 270",
@@ -80,7 +85,7 @@ const products = [
 
 const ITEMS_PER_PAGE = 6;
 
-const Hero = ({ selectedColor, selectedCategory = "All" }) => {
+const Hero: React.FC<HeroProps> = ({ selectedColor, selectedCategory = "All" }) => {
   let filteredProducts = products;
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -102,7 +107,7 @@ const Hero = ({ selectedColor, selectedCategory = "All" }) => {
   }
 
   // Sorting logic
-  const sortProducts = (items) => {
+  const sortProducts = (items: products[]) => {
     switch (sortOption) {
       case "nameAsc":
         return [...items].sort((a, b) => a.title.localeCompare(b.title));
